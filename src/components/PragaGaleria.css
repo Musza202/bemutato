@@ -1,0 +1,224 @@
+/* Alap stílusok */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .praga-galeria {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Hero rész */
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Prague_skyline_view.jpg/1200px-Prague_skyline_view.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    margin-bottom: 40px;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero p {
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Szekciók */
+  .section {
+    margin-bottom: 60px;
+  }
+  
+  .section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    position: relative;
+  }
+  
+  .section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #e74c3c;
+    margin: 15px auto;
+  }
+  
+  /* Kategória szűrő */
+  .kategoria-szuro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .kategoria-gomb {
+    padding: 8px 16px;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .kategoria-gomb:hover {
+    background: #ddd;
+  }
+  
+  .kategoria-gomb.aktiv {
+    background: #e74c3c;
+    color: white;
+  }
+  
+  /* Galéria */
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .galeria-kartya {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .galeria-kartya:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .kep-tarolo {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .kep-tarolo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .galeria-kartya:hover .kep-tarolo img {
+    transform: scale(1.05);
+  }
+  
+  .kategoria-cimke {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
+  
+  .kartya-tartalom {
+    padding: 20px;
+  }
+  
+  .kartya-tartalom h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .kartya-tartalom p {
+    margin: 0;
+    color: #666;
+  }
+  
+  /* Tippek */
+  .pragai-tippek {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .tippek-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .tipp-kartya {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tipp-kartya h3 {
+    color: #e74c3c;
+    margin-top: 0;
+  }
+  
+  /* Lábléc */
+  footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #2c3e50;
+    color: white;
+    margin-top: 60px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  /* Reszponzív */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero p {
+      font-size: 1.4rem;
+    }
+    
+    .galeria-grid, .tippek-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero {
+      padding: 80px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+    }
+    
+    .section h2 {
+      font-size: 1.8rem;
+    }
+  }
