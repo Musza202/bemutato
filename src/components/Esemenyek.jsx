@@ -2,7 +2,7 @@ import './Esemenyek.css';
 
 export default function Esemenyek(){
     return(
-        <div>
+        <div id="esemenyek">
              <h1>Prágai Események 2025 Márciusában</h1>
     <ul>
         <li>

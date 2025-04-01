@@ -2,7 +2,7 @@ import './Tippek.css'
 
 export default function Tippek(){
     return(
-        <div>
+        <div id="tippek">
             <h1>Tippek:</h1>
         <ul>
             <li>

@@ -1,7 +1,7 @@
 import "./Fooldal.css";
 export default function Fooldalaz(){
     return(
-    <div>
+    <div id="fooldal">
             <h1>Prága</h1>
             <main>
             <p>Prága, Csehország fővárosa, a "Száztornyú város" néven ismert. 

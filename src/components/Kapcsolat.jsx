@@ -1,6 +1,6 @@
 export default function Kapcsolat(){
     return(
-        <div>
+        <div id="kapcsolat">
             <h1>Prágai Turisztikai Információs Központok és Utazási Irodák</h1>
 
 <ul>

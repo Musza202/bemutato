@@ -4,7 +4,7 @@ import "./Latvanyossagok.css"
 
 export default function Latvany() {
     return (
-        <div>
+        <div id="latvanyossag">
             <main>
                 <h1>Prága Látványosságai</h1>
                 <ul>
