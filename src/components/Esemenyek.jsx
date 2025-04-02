@@ -1,4 +1,4 @@
-import './Esemenyek.css';
+
 
 export default function Esemenyek(){
     return(

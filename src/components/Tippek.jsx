@@ -1,4 +1,4 @@
-import './Tippek.css'
+
 
 export default function Tippek(){
     return(

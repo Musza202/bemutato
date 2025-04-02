@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Routes , Route, Link} from 'react-router-dom';
 import Fooldalaz from './Fooldal';
-import "./Latvanyossagok.css"
+
 
 export default function Latvany() {
     return (

@@ -1,4 +1,4 @@
-import "./Fooldal.css";
+
 export default function Fooldalaz(){
     return(
     <div id="fooldal">

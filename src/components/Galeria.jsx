@@ -1,5 +1,5 @@
 import React from 'react';
-import './PragaGaleria.css';
+
 
 const PragaGaleria = () => {
   // Prágai nevezetességek
