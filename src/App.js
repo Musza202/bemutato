@@ -10,9 +10,9 @@ import {BrowserRouter as Router, Routes , Route, Link} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div >
       <Router>
-        <nav>
+        <nav id='navbar'>
           <Link to="/">Főoldal</Link>
           <Link to="/esemenyek">Események</Link>
           <Link to="/galeria">Galéria</Link>

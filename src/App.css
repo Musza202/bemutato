@@ -1,38 +1,953 @@
-.App {
+#fooldal {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://images.coolwallpapers.me/picsup/3333240-czech-republic-czech-bridge-city-praha-prague.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#fooldal .background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 107, 53, 0.151); /* Orange with 30% opacity */
+  z-index: 0;
+}
+
+#fooldal .content {
+  position: relative;
+  z-index: 1;
+}
+
+#fooldal h1 {
+  color: white;
   text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#fooldal h1 span {
+  border-bottom: 3px solid white;
+  padding-bottom: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#fooldal main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#fooldal p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+#fooldal p span {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: rgba(255, 107, 53, 0.1);
+  border-left: 3px solid #ff6b35;
+}
+
+/* Optional hover effects */
+#fooldal h1:hover {
+  color: #e05a2b; /* Darker orange on hover */
+  transition: color 0.3s ease;
+}
+
+#fooldal p span:hover {
+  background-color: rgba(255, 107, 53, 0.2); /* Slightly darker on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Navigation Bar Styles */
+#navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+#navbar a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+#navbar a:hover {
+  color: #ff6b35;
+}
+
+#navbar a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff6b35;
+  transition: width 0.3s ease;
+}
+
+#navbar a:hover::before {
+  width: 100%;
+}
+
+#navbar a.active {
+  color: #ff6b35;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  #navbar a {
+    margin: 0.3rem 0;
+    padding: 0.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+/* Events Page Styles */
+#esemenyek {
+  position: relative;
   min-height: 100vh;
+  background: url('https://images.coolwallpapers.me/picsup/3333240-czech-republic-czech-bridge-city-praha-prague.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+#esemenyek .background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 107, 53, 0.151);
+  z-index: 0;
+}
+
+#esemenyek .content {
+  position: relative;
+  z-index: 1;
+}
+
+#esemenyek h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#esemenyek h1 span {
+  border-bottom: 3px solid white;
+  padding-bottom: 0.5rem;
+}
+
+#esemenyek main {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+}
+
+.events-list li {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.events-list li:last-child {
+  border-bottom: none;
+}
+
+.events-list h2 {
+  color: #ff6b35;
+  margin-bottom: 0.5rem;
+}
+
+.events-list p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.events-list strong {
+  color: #ff6b35;
+}
+
+/* Hover effects */
+.events-list li:hover {
+  background-color: rgba(255, 107, 53, 0.05);
+  transition: background-color 0.3s ease;
+  padding-left: 0.5rem;
+  border-left: 3px solid #ff6b35;
+}
+
+/* Prague Gallery Styles - Orange/White Theme */
+.praga-galeria {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://images.coolwallpapers.me/picsup/3333240-czech-republic-czech-bridge-city-praha-prague.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.praga-galeria::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 107, 53, 0.15);
+  z-index: 0;
+}
+
+.praga-galeria > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  color: #ff6b35;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Main Content Sections */
+.section {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+.section h2 {
+  color: #ff6b35;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #ff6b35;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Category Filter */
+.kategoria-szuro {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.kategoria-gomb {
+  background-color: white;
+  border: 2px solid #ff6b35;
+  color: #ff6b35;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.kategoria-gomb:hover {
+  background-color: rgba(255, 107, 53, 0.1);
+}
+
+.kategoria-gomb.aktiv {
+  background-color: #ff6b35;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Gallery Grid */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.galeria-kartya {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-kartya:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.2);
+}
+
+.kep-tarolo {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.kep-tarolo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galeria-kartya:hover .kep-tarolo img {
+  transform: scale(1.05);
+}
+
+.kategoria-cimke {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff6b35;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.kartya-tartalom {
+  padding: 1.5rem;
+}
+
+.kartya-tartalom h3 {
+  color: #ff6b35;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.kartya-tartalom p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Tips Section */
+.tippek-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tipp-kartya {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #ff6b35;
+}
+
+.tipp-kartya h3 {
+  color: #ff6b35;
+  margin-bottom: 1rem;
+}
+
+.tipp-kartya p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-top: 2rem;
+  color: #555;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+
+/* Prague Gastronomy Styles - Orange/White Theme */
+.praga-gasztronomia {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://images.coolwallpapers.me/picsup/3333240-czech-republic-czech-bridge-city-praha-prague.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.praga-gasztronomia::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 107, 53, 0.15);
+  z-index: 0;
+}
+
+.praga-gasztronomia > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  color: #ff6b35;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Main Content Sections */
+.section {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+.section h2 {
+  color: #ff6b35;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #ff6b35;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Food Grid */
+.etelek-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.etel-kartya {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etel-kartya:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.2);
+}
+
+.etel-kartya img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #ff6b35;
+}
+
+.etel-kartya h3 {
+  color: #ff6b35;
+  padding: 1rem 1.5rem 0;
+  font-size: 1.4rem;
+}
+
+.etel-kartya p {
+  color: #555;
+  padding: 0 1.5rem 1.5rem;
+  line-height: 1.5;
+}
+
+/* Restaurants List */
+.etteremek-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.etterem-kartya {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #ff6b35;
+  transition: transform 0.3s ease;
+}
+
+.etterem-kartya:hover {
+  transform: translateX(5px);
+}
+
+.etterem-kartya h3 {
+  color: #ff6b35;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.etterem-kartya p {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.etterem-kartya .cim {
+  font-style: italic;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Fun Facts Section */
+.fun-facts ul {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+}
+
+.fun-facts li {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.fun-facts li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.8em;
+  height: 0.8em;
+  background-color: #ff6b35;
+  border-radius: 50%;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-top: 2rem;
+  color: #555;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .etelek-grid,
+  .etteremek-lista {
+    grid-template-columns: 1fr;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+  
+  .fun-facts li {
+    padding-left: 1.2rem;
+  }
+  
+  .fun-facts li::before {
+    width: 0.6em;
+    height: 0.6em;
+  }
+}
+
+/* Prague Attractions Page Styles */
+#latvanyossag {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://images.coolwallpapers.me/picsup/3333240-czech-republic-czech-bridge-city-praha-prague.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+#latvanyossag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 107, 53, 0.15);
+  z-index: 0;
+}
+
+#latvanyossag main {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#latvanyossag h1 {
+  color: #ff6b35;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #ff6b35;
+  display: inline-block;
+}
+
+#latvanyossag ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+#latvanyossag li {
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid #ff6b35;
+}
+
+#latvanyossag li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.15);
+  background-color: rgba(255, 107, 53, 0.03);
+}
+
+#latvanyossag strong {
+  color: #ff6b35;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #latvanyossag {
+    padding: 1rem;
+  }
+  
+  #latvanyossag main {
+    padding: 1.5rem;
+  }
+  
+  #latvanyossag h1 {
+    font-size: 2rem;
+  }
+  
+  #latvanyossag li {
+    padding: 1rem;
+  }
+}
+
+/* Travel Tips Page Styles */
+#tippek {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://images.coolwallpapers.me/picsup/3333240-czech-republic-czech-bridge-city-praha-prague.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+#tippek::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 107, 53, 0.15);
+  z-index: 0;
+}
+
+#tippek > h1 {
+  position: relative;
+  z-index: 1;
+  color: #ff6b35;
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #ff6b35;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#tippek ul {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#tippek li {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #ff6b35;
+}
+
+#tippek li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.2);
+}
+
+#tippek h2 {
+  color: #ff6b35;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+#tippek p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #tippek {
+    padding: 1rem;
+  }
+  
+  #tippek > h1 {
+    font-size: 2.2rem;
+    width: 90%;
+  }
+  
+  #tippek li {
+    padding: 1.2rem;
+  }
+  
+  #tippek h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Contact/Information Centers Page Styles */
+#kapcsolat {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://images.coolwallpapers.me/picsup/3333240-czech-republic-czech-bridge-city-praha-prague.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+#kapcsolat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 107, 53, 0.15);
+  z-index: 0;
+}
+
+#kapcsolat > h1 {
+  position: relative;
+  z-index: 1;
+  color: #ff6b35;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #ff6b35;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+}
+
+#kapcsolat ul {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 1.5rem;
+}
+
+#kapcsolat li {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.8rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #ff6b35;
+}
+
+#kapcsolat li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.15);
+}
+
+#kapcsolat h3 {
+  color: #ff6b35;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+}
+
+#kapcsolat p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+#kapcsolat strong {
+  color: #333;
+}
+
+#kapcsolat a {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+#kapcsolat a:hover {
+  color: #e05a2b;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #kapcsolat {
+    padding: 1rem;
+  }
+  
+  #kapcsolat > h1 {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  
+  #kapcsolat ul {
+    grid-template-columns: 1fr;
+  }
+  
+  #kapcsolat li {
+    padding: 1.4rem;
+  }
+  
+  #kapcsolat h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #kapcsolat > h1 {
+    font-size: 1.5rem;
+  }
+  
+  #kapcsolat li {
+    padding: 1.2rem;
   }
 }
