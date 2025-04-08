@@ -1,6 +1,7 @@
 {
   "name": "bemutato",
   "version": "0.1.0",
+  "homepage":"https://musza202.github.io/bemutato/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
