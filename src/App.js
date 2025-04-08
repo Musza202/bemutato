@@ -6,6 +6,7 @@ import PragaGasztronomia from './components/Gasztronomia';
 import Kapcsolat from './components/Kapcsolat';
 import Latvany from './components/Latvanyosagok';
 import Tippek from './components/Tippek';
+import Terkep from './components/Terkep';
 import {BrowserRouter as Router, Routes , Route, Link} from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Link to="/latvany">Látvány</Link>
           <Link to="/tippek">Tippek</Link>
           <Link to="/kapcsolat">Kapcsolat</Link>
+          <Link to="/terkep">Térkép</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Fooldalaz/>}></Route>
@@ -29,6 +31,7 @@ function App() {
           <Route path="/latvany" element={<Latvany/>}></Route>
           <Route path="/tippek" element={<Tippek/>}></Route>
           <Route path="/kapcsolat" element={<Kapcsolat/>}></Route>
+          <Route path="/terkep" element={<Terkep />}></Route>
         </Routes>
       </Router>
     </div>
